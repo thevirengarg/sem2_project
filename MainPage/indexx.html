@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordCounter</title>
+    <link rel="stylesheet" href="stylee.css">
+</head>
+
+<body>
+
+    <div class="nav"> 
+        <h1 class="logo">WordCounter</h1>
+
+        <div class="tags">
+            <a href="/LandingPage/index.html">Home</a>
+            <a href="">Features</a>
+        </div>
+
+
+        <div class="button">
+           <a href="/TypingTest/index3.html"> <button class="typingtest">Typing test?</button></a>
+        </div>
+    </div>
+
+    <div class="main">
+
+
+        <div class="left">
+            <div class="j">
+                <h1 class="hd1">From words to sentences, characters to paragraphs, we count it all.</h>
+            </div>
+            <div class="para">
+                <span class="role"></span>
+                Count
+            </div>
+        </div>
+
+        <div class="right">
+            <textarea name="" id="text-input" placeholder="Enter the text" cols="30" rows="10"></textarea>
+
+            <div class="box">
+                <div class="boxes">
+                    Word <br> <br> <span id="word-count">0</span>
+                </div>
+                <div class="boxes">
+                    Characters <br> <br> <span id="char-count">0</span>
+                </div>
+                <div class="boxes">
+                    Space <br><br> <span id="space-count">0</span>
+                </div>
+                <div class="boxes">
+                    Paragraph <br><br> <span id="para-count">0</span>
+                </div>
+            </div>
+
+            <div class="box2">
+                <div class="boxes">
+                    Sentences <br><br> <span id="sentence-count">0</span>
+                </div>
+                <div class="butt0n">
+                    <button class="boxes" id="clr"> Clear ALl</button>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <!-- <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script> -->
+        <script>
+            var typeData = new Typed(".role", {
+                strings: [
+                    "Word",
+                    "Char",
+                    "Paragraph",
+                    "Sentence",
+                    "Space",
+                ],
+                loop: true,
+                typeSpeed: 100,
+                backSpeed: 80,
+                backDelay: 1000,
+            });
+
+        </script>
+</body>
+
+</html>
