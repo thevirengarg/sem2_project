@@ -1,4 +1,4 @@
-    //Display Values
+     //Display Values
     const timename = document.querySelector('.titletime');
     const time = document.querySelector('.title30');
     const cwname = document.querySelector('.titlecw');

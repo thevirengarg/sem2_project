@@ -46,11 +46,12 @@
 }
 
 .main {
-    margin-top: 10em;
+    margin-top: 5em;
     display: flex;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-    gap: 5em;
+    gap: 1em;    
 }
 
 .role {
@@ -61,7 +62,8 @@
 .left {
     color: #1f2937;
     display: flex;
-    gap: 1em;
+    flex-direction: column;
+    /* gap: 1em; */
 }
 
 
@@ -69,7 +71,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
     gap: 1em;
 }
 
@@ -85,7 +88,8 @@
 
 .box2 {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 1em;
@@ -99,7 +103,7 @@ textarea {
     outline: none;
     font-size: 16px;
     height: 500px;
-    width: 700px;
+    width: 1000px;
     color: #0e101a;
     background-color: #ffffff;
     padding: 50px 30px 80px 30px;
@@ -110,7 +114,8 @@ textarea {
 
 
 .box, .box2 {
-    margin-bottom: 5em;
+    margin-bottom: 1em;
+
 }
 
 
@@ -147,6 +152,10 @@ textarea {
         align-items: center;
         align-content: center;
     }
+
+    textarea {
+        width: 700px;
+    }
 }
 
 @media screen and (max-width:500px) {
@@ -159,7 +168,7 @@ textarea {
     }
 
     .box, .box2 {
-        margin-bottom: 5em;
+        /* margin-bottom: 5em; */
     }
 
     .boxes {
