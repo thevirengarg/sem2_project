@@ -70,7 +70,6 @@
                 </p>
             </div>
         </div>
-
         <div class="main3" id="contact">
             <div class="left3">
 
@@ -78,27 +77,27 @@
                     <h1 class="hd3">Contact Us</h1>
                     <p>Questions, Thoughts, Or Just Want To Say Hello?</p>
                 </div>
-                <form action="">
+                <form action="" class="contactusform">
 
                     <div class="input-fields">
-                        <input type="text" placeholder="Enter your name">
+                        <input type="text" placeholder="Enter your name" id="in1">
                     </div>
                     <div class="input-fields">
-                        <input type="text" placeholder="Enter your email address">
+                        <input type="text" placeholder="Enter your email address" id="in2">
                     </div>
                     <div class="input-fields">
-                        <input type="text" placeholder="Enter your subject">
+                        <input type="text" placeholder="Enter your subject" id="in3">
                     </div>
                     <div class="input-text">
-                        <textarea name="" placeholder="Enter your message" id="" cols="30" rows="10"></textarea>
+                        <textarea name="" placeholder="Enter your message" id="in4" cols="30" rows="10"></textarea>
                     </div>
 
                 </form>
 
-                <button class="msg">Send Message</button>
+                <button class="msg" onclick="sendMessage()">Send Message</button>
             </div>
             <div class="right3">
-                <img src="images/call.png" class="ofc3"  width="500px" height="500px" alt="">
+                <img src="images/call.png" class="ofc3" width="500px" height="500px" alt="">
 
             </div>
         </div>
@@ -106,13 +105,32 @@
         <div class="footer">
             Copyright &copy
         </div>
-
     </div>
-
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init();
+        function sendMessage() {
+            let message = document.querySelector(".msg")
+            let name = document.querySelector("#in1").value;
+            let email = document.querySelector("#in2").value;
+            let subject = document.querySelector("#in3").value;
+            let msg = document.querySelector("#in4").value
+            let form = document.querySelector(".contactusform");
+
+            let userInfo = JSON.parse(window.localStorage.getItem("users")) || []
+
+            let userresponse = {
+                "name": name,
+                "email": email,
+                "subject": subject,
+                "message": msg
+            }
+
+            userInfo.push(userresponse)
+
+            window.localStorage.setItem("users", JSON.stringify(userInfo))
+            form.reset()
+            event.preventDefault()
+            window.location.reload()
+        }
     </script>
 </body>
 
