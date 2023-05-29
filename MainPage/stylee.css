@@ -22,7 +22,7 @@
 }
 
 .nav {
-    /* position: sticky; */
+    color: #1f2937;
     padding: 1em 10em 1em 10em;
     display: flex;
     justify-content: space-between;
@@ -45,31 +45,11 @@
     font-size: 20px;
 }
 
-
-
-.button {
-    width: 215px;
+.main {
+    margin-top: 10em;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.typingtest {
-    height: 50px;
-    width: 100px;
-    border-radius: 5px;
-    background-color: white;
-}
-
-.typingtest:hover {
-    background-color: black;
-    color: white;
-}
-
-.main {
-    padding: 0em 10em 10em 10em;
-    /* border: 1px solid black; */
-    display: flex;
     gap: 5em;
 }
 
@@ -77,41 +57,24 @@
     color: #1273eb;
 }
 
-.hd1 {
-    font-size: 48px;
-}
-
-.para {
-    font-size: 48px;
-    font-weight: bolder;
-}
-
-
 
 .left {
-    padding-top: 15em;
+    color: #1f2937;
     display: flex;
-    flex-direction: column;
     gap: 1em;
-    /* border: 1px solid black; */
 }
 
-.right {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2em;
-    padding: 9em 0em 0em 0em;
-}
 
 .box {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     gap: 1em;
 }
 
 .boxes {
-    background-color: #0e101a;
+    background-color:#0e101a;
     border-radius: 5px;
     width: 200px;
     height: 75px;
@@ -122,24 +85,90 @@
 
 .box2 {
     display: flex;
-
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 1em;
 }
 
 textarea {
+    /* max-width: 95%; */
     overflow-y: hidden;
     border: none;
     resize: none; 
     outline: none;
     font-size: 16px;
     height: 500px;
-    width: 1000px;
+    width: 700px;
     color: #0e101a;
-    max-width: 95%;
     background-color: #ffffff;
     padding: 50px 30px 80px 30px;
     border-radius: 8px;
     box-shadow: 30px 30px 100px rgba(0, 0, 0, 0.3);
 
+}
+
+
+.box, .box2 {
+    margin-bottom: 5em;
+}
+
+
+.footer {
+    margin-top: 10%;
+    background-color: #131212;
+    height: 100px;
+    width: 100%;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+@media screen and (max-width:1200px) {
+
+    .nav {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tags {
+        display: none;
+    }
+
+    .main {
+        margin-top: 5em;
+        padding: 0px;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+}
+
+@media screen and (max-width:500px) {
+    
+
+    .main {
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .box, .box2 {
+        margin-bottom: 5em;
+    }
+
+    .boxes {
+        width: 150px;
+    }
+
+    textarea {
+        padding: 50px 0px 0px 30px;
+        width: 300px;
+    }
 }
 
