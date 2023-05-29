@@ -84,13 +84,16 @@ textarea {
 
 
 @media screen and (max-width:750px)  {
+  .title30, .title0 {
+    font-size: 5em;
+  }
     .result {
       gap: 3em;
     }
     .random {
-      width: 300px;
+      width: 250px;
     }
     textarea {
-      width: 300px;
+      width: 200px;
     }
 }
