@@ -81,3 +81,16 @@ textarea {
 .current {
   color: white;
 }
+
+
+@media screen and (max-width:750px)  {
+    .result {
+      gap: 3em;
+    }
+    .random {
+      width: 300px;
+    }
+    textarea {
+      width: 300px;
+    }
+}
