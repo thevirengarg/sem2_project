@@ -31,8 +31,8 @@ f1caps.addEventListener("click", ()=> {
   const sentences = inputTextArea.value.split(/(?<=[.!?])\s+/);
 
   const capitalizedSentences = sentences.map((sentence) =>
-    sentence.replace(/^\w/, (char) => char.toUpperCase())
-  );
+    sentence.replace(/\w/, (char) => char.toUpperCase())
+  ).join(" ");
 
   inputTextArea.value = capitalizedSentences;
 });
