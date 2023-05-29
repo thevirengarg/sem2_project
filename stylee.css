@@ -27,6 +27,11 @@ body {
     /* 215/48 */
 }
 
+.nav a {
+    text-decoration: none;
+    color: black;
+}
+
 .nav {
     color: #1f2937;
     padding: 1em 10em 1em 10em;

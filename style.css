@@ -22,6 +22,10 @@ body {
     font-size: 32px;
     font-family: Ubuntu, sans-serif;
 }
+.nav a {
+    text-decoration: none;
+    color: black;
+}
 
 .nav {
     width: 100%;
