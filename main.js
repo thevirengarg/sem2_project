@@ -7,8 +7,12 @@ let button = document.getElementById("clr");
 let sentence = document.getElementById("sentence-count");
 let readingtime = document.getElementById("reading");
 let speaking = document.getElementById("speaking");
+let caps = document.getElementById("caps");
+let f1caps = document.getElementById("fcaps");
+
 
 inputTextArea.addEventListener("input", function(){
+
   let txt = inputTextArea.value.trim();
   let countingword = txt.split(/\s+/).filter((item) => item).length;
   let read = Math.floor(countingword * (60/275));
@@ -22,6 +26,30 @@ characCount.textContent = (inputTextArea.value.match(/[a-z0-9.]/gi) || []).lengt
   readingtime.textContent = read;
   speaking.textContent = speak;
 });
+
+f1caps.addEventListener("click", ()=> {
+  const sentences = inputTextArea.value.split(/(?<=[.!?])\s+/);
+
+  const capitalizedSentences = sentences.map((sentence) =>
+    sentence.replace(/^\w/, (char) => char.toUpperCase())
+  );
+
+  inputTextArea.value = capitalizedSentences;
+});
+
+
+caps.addEventListener("click", ()=> {
+  let words = inputTextArea.value.split(" ");
+  let capitalizedWords = words.map(function(word) {
+    return word.charAt(0).toUpperCase() + word.slice(1);
+  });
+
+  let capitalizedParagraph = capitalizedWords.join(" ");
+  inputTextArea.value = capitalizedParagraph;
+
+});
+
+
 
 
 
